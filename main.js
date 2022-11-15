@@ -1,18 +1,23 @@
-addEventListener("DOMContentLoaded",(e)=>{
-    let form= document.querySelector("#form")
-    form.querySelector("submit",(e)=>{
-    preventDefault();
-
-        let datainput=Object.fromEntries(new FormData(e.target))
-        let farenheit=Number(datainput.celcius)
-        let pro=(farenheit-32)*5/9
-        let mytable=document.querySelector("tbody");
-        mytable.insertAdjacentHTML("beforeend",`
-        <tr>
-            <td>${farenheit}</td>
-            <td>${pro}</td>
-        </tr>
-        `)
-
-})
+addEventListener("DOMContentLoaded", (e)=>{
+    let form=document.querySelector('#input')
+    let cont =1   
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();       
+        if(cont <=50){
+        let datosEntrada = Object.fromEntries(new FormData(e.target))
+            
+            let observaciones= datosEntrada.observaciones
+            let hora= (datosEntrada.hora)
+        
+            let tabla=document.querySelector("tbody");
+            tabla.insertAdjacentHTML("beforeend",`
+                <tr>
+                    <td> ${cont}  </td>
+                    <td> ${observaciones}  </td>
+                    <td> ${hora} </td>
+                </tr>
+                `)
+            cont++
+        }
+    })               
 })

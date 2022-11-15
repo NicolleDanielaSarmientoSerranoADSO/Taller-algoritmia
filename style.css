@@ -5,3 +5,12 @@ body{
 table,th,td{
     border: 1.5px solid black;
 }
+table{
+    background-color: beige;
+}
+th{
+    background-color: rgb(66, 160, 160);
+}
+td{
+    background-color: rgb(28, 234, 241);
+}
