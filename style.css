@@ -2,21 +2,6 @@ body{
     background-color: rgb(37, 247, 236);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-h1,h2{
-    text-align: center;
-}
-div{
-    margin: 0 0 0 34em ;
-}
-input{
-    margin-bottom: 2em;
-}
 table,th,td{
     border: 1.5px solid black;
-}
-th{
-    background-color: rgb(6, 122, 122);
-}
-td{
-    background-color: rgb(130, 179, 235);
 }

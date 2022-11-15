@@ -1,19 +1,18 @@
 addEventListener("DOMContentLoaded",(e)=>{
-    let formulario = document.querySelector("#form")
-        formulario.addEventListener("submit",(e)=>{e.preventDefault();
+    let form= document.querySelector("#form")
+    form.querySelector("submit",(e)=>{
+    preventDefault();
 
-            let datainput=Object.fromEntries(new FormData(e.target));
-            let pesos=document.querySelector("#pesos")
-            let dolarec=datainput.pesos
-            let conversion= Number(dolarec*0.000023)
+        let datainput=Object.fromEntries(new FormData(e.target))
+        let farenheit=Number(datainput.celcius)
+        let pro=(farenheit-32)*5/9
+        let mytable=document.querySelector("tbody");
+        mytable.insertAdjacentHTML("beforeend",`
+        <tr>
+            <td>${farenheit}</td>
+            <td>${pro}</td>
+        </tr>
+        `)
 
-            let mytabla = document.querySelector('tbody');
-            mytabla.insertAdjacentHTML('beforeend',`
-            <tr>
-                <td>${pesos}</td>
-                <td>${conversion}</td>
-            </tr>
-            `)
-
-        })
+})
 })
